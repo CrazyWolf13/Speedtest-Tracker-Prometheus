@@ -42,23 +42,23 @@ Same steps here as before for exporting data but without needs for influxDBv1. C
 ### Steps
 
 ```
-1. create bucket in InfluxDBv2
+1. Create bucket in InfluxDBv2: speedtest-tracker
 
-2.1 create or use exist API token (ALL ACCESS) for Grafana and auth.
+2.1 Create or use existing API token (ALL ACCESS) for Grafana and auth.
 
-2.2 create API token (read/write) for this bucket to use with speedtest-tracker or use exist.
+2.2 Create API token (read/write) for this bucket to use with speedtest-tracker or use existing.
 
-3. Config Client of InfluxDBv2(Speedtest-tracker) by entered data : bucket, etc ...
+3. Configure Speedtest Tracker application with relevant InfluxDBv2 configuration: URL, org, bucket, token, etc..., and 'Test connection'
 
-4. Check in InfluxDBv2 in Data Explorer that data is exist in bucket
+4. Check in InfluxDBv2 in Data Explorer that test data exists in bucket
 
-5. Then you can select all data needed and switch to Script Editor copy the script (already done)
+5. Configure Grafana to use with data from InfluxDBv2 ( Select Datasource = InfluxDB , Query Language = Flux , Organization = yourorg , Bucket = speedtest-tracker , Token = yourtoken for bucket )
 
-6. Configure Grafana to use with data from InfluxDBv2 ( select datasource = InfluxDB , Query Language = Flux  ,Organization = yourorg , Bucket = speedtest , Token = yourtoken for bucket )
+6. Import this dashboard to Grafana (Dashboard > New > Import) using link in README.md
 
-7. import this script in Grafana Dashboard .
+7. Return to Speedtest Tracker application and Export data to InfluxDB (Settings > Data Integration > Export current results)
 
-8. Enjoy
+7. Enjoy
 ```
 
 ![image](https://github.com/user-attachments/assets/25aeb76a-5acf-4135-8073-a61f6bcb8cc3)
