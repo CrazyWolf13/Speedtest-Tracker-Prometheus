@@ -2,6 +2,7 @@
 
 > [!NOTE]  
 > Special Thanks to @masterwishx for creating this awesome dashboard, please leave credits to him, as I've only adapted this board to work with Prometheus instead of InfluxDBv2!
+> Here is the Original Repository: https://github.com/masterwishx/Speedtest-Tracker-v2-InfluxDBv2
 
 A dashboard to display data exported by Speedtest Tracker. Avalible Now at Grafana Dashboard 17808
 (https://grafana.com/grafana/dashboards/17808-speedtest-tracker-v2-influxdbv2/)
