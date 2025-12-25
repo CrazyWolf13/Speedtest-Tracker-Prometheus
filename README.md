@@ -1,13 +1,9 @@
-## Speedtest-Tracker-v2-InfluxDBv2
+## Speedtest-Tracker-Prometheus
 
-A dashboard to display data exported by Speedtest Tracker v2 . Avalible Now at Grafana Dashboard 17808
+A dashboard to display data exported by Speedtest Tracker. Avalible Now at Grafana Dashboard 17808
 (https://grafana.com/grafana/dashboards/17808-speedtest-tracker-v2-influxdbv2/)
 
-This dashboard shows data collected by Speedtest Tracker v2 https://github.com/alexjustesen/speedtest-tracker and exported in an InfluxDBv2 database in the bucket.
-
-Dashboard based on my previous dashboard Speedtest Tracker - InfluxDBv2 with guide for OLD Speedtest Tracker app. https://grafana.com/grafana/dashboards/16428-speedtest-tracker/
-
-Same steps here as before for exporting data but without needs for influxDBv1. Check [Here](#steps)
+This dashboard shows data collected by Speedtest Tracker https://github.com/alexjustesen/speedtest-tracker and scraped by Prometheus.
 
 ### Info
 ![Screenshot 2024-08-14 202917](https://github.com/user-attachments/assets/aab1ed25-2e70-4486-b540-4da6306418b6)
@@ -15,26 +11,8 @@ Same steps here as before for exporting data but without needs for influxDBv1. C
 
 ### Updates
 
-- **8.12.24**
+- **25.12.2025**
   - Fixed time in Latest result panel.
-
-- **7.12.24**
-  - Compatibility Update for Speedtest Tracker v0.25: some fields have been moved to tags + some fixes.
-
-- **14.8.24**
-  - More Panels added + some fixes.
-
-- **20.4.24**
-  - Panels fixed + Avg Speed fixed.
-
-- **6.4.24**
-  - Added Multi bucket support.
-
-### Multi buckets
-
- You can change bucket name and add multiple buckets by:
-
- - **Go to Dashboard Setting - Variables - Click on bucket - Custom options - Add new buckets**
 
 
 ![Screenshot 2024-04-06 204806](https://github.com/masterwishx/Speedtest-Tracker-v2-InfluxDBv2/assets/28630321/808c1b36-71dc-4669-8014-6aac6ebfd85b)
@@ -42,21 +20,11 @@ Same steps here as before for exporting data but without needs for influxDBv1. C
 ### Steps
 
 ```
-1. Create bucket in InfluxDBv2: speedtest-tracker
+1. Activate Prometheus Integration like described here: https://docs.speedtest-tracker.dev/settings/data-platforms/prometheus
 
-2.1 Create or use existing API token (ALL ACCESS) for Grafana and auth.
+2. Configure Grafana to use your Prometheus instance.
 
-2.2 Create API token (read/write) for this bucket to use with speedtest-tracker or use existing.
-
-3. Configure Speedtest Tracker application with relevant InfluxDBv2 configuration: URL, org, bucket, token, etc..., and 'Test connection'
-
-4. Check in InfluxDBv2 in Data Explorer that test data exists in bucket
-
-5. Configure Grafana to use with data from InfluxDBv2 ( Select Datasource = InfluxDB , Query Language = Flux , Organization = yourorg , Bucket = speedtest-tracker , Token = yourtoken for bucket )
-
-6. Import this dashboard to Grafana (Dashboard > New > Import) using link in README.md
-
-7. Return to Speedtest Tracker application and Export data to InfluxDB (Settings > Data Integration > Export current results)
+4. Load Dashboard in Grafana
 
 7. Enjoy
 ```
