@@ -12,10 +12,7 @@ This dashboard shows data collected by Speedtest Tracker https://github.com/alex
 ### Updates
 
 - **25.12.2025**
-  - Fixed time in Latest result panel.
-
-
-![Screenshot 2024-04-06 204806](https://github.com/masterwishx/Speedtest-Tracker-v2-InfluxDBv2/assets/28630321/808c1b36-71dc-4669-8014-6aac6ebfd85b)
+  - Initial Version, converted from InfluxDB to Prometheus
 
 ### Steps
 
@@ -29,5 +26,5 @@ This dashboard shows data collected by Speedtest Tracker https://github.com/alex
 7. Enjoy
 ```
 
-![image](https://github.com/user-attachments/assets/25aeb76a-5acf-4135-8073-a61f6bcb8cc3)
-![influxsetup](https://user-images.githubusercontent.com/28630321/187088939-492e8910-395b-4aef-b1f8-199ea98a2dc8.jpg)
+![image](https://raw.githubusercontent.com/alexjustesen/speedtest-tracker-docs/refs/heads/main/.gitbook/assets/prometheus_settings.png)
+[How to: Add Prometheus Datasource to Grafana](https://grafana.com/docs/grafana/latest/datasources/prometheus/configure/)
