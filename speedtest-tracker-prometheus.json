@@ -842,7 +842,7 @@
             },
             "showPoints": "always",
             "showValues": false,
-            "spanNulls": false,
+            "spanNulls": true,
             "stacking": {
               "group": "A",
               "mode": "none"
